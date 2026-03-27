@@ -23,4 +23,14 @@ def password():
         Contraseña muy corta
         Debe contener un numero
     """
-    pass
+    contrasenia  = input()
+    numeros = "012345678"
+    
+    if (len(contrasenia) >= 8) and any(numeros.isdigit() for numeros in contrasenia):
+        print("Contraseña valida")
+
+    if len(contrasenia) < 8 :
+        print("Contraseña muy corta")
+
+    if not any(numeros.isdigit() for numeros in contrasenia):
+        print("Debe contener un numero")
